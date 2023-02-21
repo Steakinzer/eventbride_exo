@@ -13,4 +13,5 @@ class UsersController < ApplicationController
     p current_user[:id]
 
   end
+
 end
