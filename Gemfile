@@ -29,6 +29,8 @@ gem "jbuilder"
 
 gem "devise"
 
+gem "faker"
+
 gem 'rails_12factor', group: :production
 
 # Use Redis adapter to run Action Cable in production

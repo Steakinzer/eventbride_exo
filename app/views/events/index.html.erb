@@ -1,1 +1,15 @@
-test
+
+<div class="container">
+<% @event.each do |event|%>
+<div class="card text-center my-3">
+  <div class="card-header">
+    <%= event.title%>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> Prix :<%=event.price%> €</h5>
+    <p class="card-text">Description : <%= event.description%></p>
+    <a href="<%= event_path(event.id)%>" class="btn btn-primary">Voir l'évenement</a>
+  </div>
+</div>
+<%end%>
+</div>
