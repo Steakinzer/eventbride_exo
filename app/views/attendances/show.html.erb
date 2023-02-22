@@ -1,0 +1,19 @@
+<div class="container text-center">
+
+<p class="h1 text-center">Liste des participants</p>
+<br>
+<div class="container d-flex justify-content-center">
+<% if @attendances.nil? %>
+<p class="h1 text-center">Vous n'avez pas encore de participants</p>
+<% else %>
+<ul class="list-group">
+<% @attendances.each do |att|%>
+<li class="list-group-item">Nom : <%=att.participent.first_name%> <%=att.participent.last_name%> ||        Email : <%=att.participent.email%></li>
+<% end %>
+</ul>
+<% end %>
+</div>
+</div>
+<div class="container text-center">Nombre de participants : <%=@attendances.count%></div>
+
+

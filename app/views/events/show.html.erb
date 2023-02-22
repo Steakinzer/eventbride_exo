@@ -12,6 +12,11 @@
     <li class="list-group-item">Date de fin : <%=@current_event.start_date + @current_event.duration.minutes%></li>
     <li class="list-group-item">Lieu : <%=@current_event.location%></li>
     <li class="list-group-item">Prix : <%=@current_event.price%> €</li>
+    <% if current_user.id == @current_event.admin_id%>
+    <%= link_to "Modifier l'évenement", attendance_path, class: "btn btn-primary"%>
+    <% else %>
+    <%= button_to "Acheter le billet", checkout_create_path(total: @current_event.price, event_id: @current_event.id), class: "btn btn-primary", remote: true %>
+    <% end %>
   </ul>
 </div>
 </div>

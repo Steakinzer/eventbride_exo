@@ -31,6 +31,8 @@ gem "devise"
 
 gem "faker"
 
+gem "stripe"
+
 gem 'rails_12factor', group: :production
 
 # Use Redis adapter to run Action Cable in production
