@@ -1,5 +1,6 @@
 <div class="container w-50 d-flex justify-content-center" >
-  <%= form_with model: @event, multipart: true do |f| %>
+<%= form_with model: @current_event do |f| %>
+  
   <%= f.label "date début" %>
   <%= f.date_select :start_date %>
   <br /> <br />
@@ -18,9 +19,7 @@
   <%= f.label 'Ville' %>
   <%= f.text_field :location %>
   <br /> <br />
-  <%= file_field_tag :picture %>
   <br /> <br />
-  <%= submit_tag "Créer un évenement" %>
+  <%= f.submit "Modifier l'évenement" %>
   <%end%>
-
 </div>

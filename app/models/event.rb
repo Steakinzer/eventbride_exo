@@ -27,4 +27,6 @@ class Event < ApplicationRecord
   validates :location,
   presence: true
 
+  has_one_attached :picture
+
 end
